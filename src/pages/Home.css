@@ -1,0 +1,64 @@
+.home {
+    background-image: url('../assets/images/home/home_hero_bg.png');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: top ;
+}
+
+.home__body {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.home__hero {
+    margin-top: 1.5rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* BANNER DEFAULTS */
+.banner .title {
+    font-weight: 400;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.banner .detail {
+    font-size: 1.375rem;
+    font-weight: 400;
+}
+
+/* BANNER 1 */
+.banner1__content {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+
+/* BANNER 2 */
+.banner2 .banner__text.title{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    width:40ch;
+}
+
+.banner2 .banner__item{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+
+    justify-items: end;
+    margin-bottom: .5rem;
+}
+
+.banner2 .banner__logo img {
+    width: 150px;
+    float:right;
+}
+
+/* BANNER 3 */
+.banner3 .banner__item img {
+    max-width:70%;
+    margin-bottom: 1rem;;
+}

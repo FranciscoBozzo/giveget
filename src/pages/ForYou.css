@@ -1,0 +1,164 @@
+.for-you {
+    overflow:hidden;
+    position: relative;
+    background-image: url('../assets/images/for_you/inicio/ForYou_Bannerprincipal.png'), linear-gradient(#5601F1, #0E0B2D 10%);
+    background-position: 77% -2%, center top;
+    background-repeat: no-repeat;
+    background-size: 270%, 100%;
+}
+
+.for-you__theme--light {
+    background-color: white;
+}
+
+.for-you__hero {
+    position: relative;
+    height: 450px;
+
+    margin-bottom: 3rem;
+}
+
+.for-you .community__logo {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    width: 80%;
+
+    transform: translatex(-50%);
+}
+
+.for-you__characteristics {
+    margin-bottom: 4rem;
+    color: white;
+
+}
+
+.characteristics__list {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.characteristics__list .icon-item {
+    margin-bottom: 1.5rem;
+}
+
+.characteristics__hero {
+    position: relative;
+    height: 400px
+}
+
+.characteristics__hero__image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(300%);
+}
+
+.for-you__rings {
+    margin-bottom:5rem;
+}
+
+.ring {
+    color: white;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 350px;
+    height: 350px;
+}
+
+.rings__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ring::before {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 0;
+    width: 140%;
+    height: 140%;
+
+    background-image: radial-gradient(transparent 50%, #5601F144 60%, transparent 70%);
+}
+
+.ring__icon {
+    max-width: 120px;
+}
+
+.ring__description {
+    text-align: center;
+    max-width: 80%;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.for-you__rewards {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+}
+
+.for-you__rewards .tango__cta {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.for-you__rewards .fan-fest__logo {
+    margin-bottom: 1.5rem;
+}
+
+.for-you__benefits {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    overflow-x: scroll;
+}
+
+.benefits__list__wrapper {
+    display: flex;
+}
+
+.benefits__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 1.5rem;
+    padding-right: 2rem;
+}
+
+.benefits__list .card {
+    align-self: stretch;
+    margin-bottom: 2rem;
+    background-color: #F5F5F5;
+    box-shadow: 0px 3px 5px 3px #0000001a;
+    
+    background-image: url('../assets/images/for_you/benefits/ForYou_Fondo.png');
+    background-position: top top;
+    background-size: 150%;
+}
+
+.benefits__list .card__body{
+    text-align: center;
+}
+

@@ -1,0 +1,14 @@
+<svg id="Grupo_2194" data-name="Grupo 2194" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58.549" height="66.873" viewBox="0 0 58.549 66.873">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_2388" data-name="Rectángulo 2388" width="58.549" height="66.873" fill="none" stroke="#5a04d8" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_2193" data-name="Grupo 2193" clip-path="url(#clip-path)">
+    <path id="Trazado_3625" data-name="Trazado 3625" d="M3.728,64.373l11.391-6.2a11.533,11.533,0,0,1,12.073.2,11.484,11.484,0,0,0,12.369,0L56.049,46.737" fill="none" stroke="#5a04d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <path id="Trazado_3626" data-name="Trazado 3626" d="M2.5,53.005l11.389-6.2a11.528,11.528,0,0,1,12.074.2,11.486,11.486,0,0,0,12.37,0L54.821,35.369" fill="none" stroke="#5a04d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <path id="Trazado_3627" data-name="Trazado 3627" d="M16.908,28.683H35.535a4.875,4.875,0,1,0,0-9.749h-13a4.875,4.875,0,0,1-4.875-4.875h0a4.873,4.873,0,0,1,4.873-4.875H38.276" fill="none" stroke="#5a04d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <line id="Línea_219" data-name="Línea 219" y1="6.683" transform="translate(29.034 2.5)" fill="none" stroke="#5a04d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <line id="Línea_220" data-name="Línea 220" y1="6.683" transform="translate(29.034 28.683)" fill="none" stroke="#5a04d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  </g>
+</svg>

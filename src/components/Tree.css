@@ -1,0 +1,64 @@
+
+.node__list:nth-of-type(0) .node__button{
+    text-align: left;
+}
+
+.node__list {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.node__item {
+    flex: 1 0 50%;
+    padding: 0.375rem;
+}
+
+.node__button {
+    width: 100%;
+
+    display:inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    padding:1rem;
+    border-radius: 0.875rem;
+    background-color: #E3D5FF;
+
+    text-align: center;
+    font-size: 1.25rem;
+    line-height:1.875;
+    font-weight: 500;
+}
+
+.node__button span {
+    position:relative;
+    bottom: -0.125rem;
+}
+
+.node__detail {
+    position:relative;
+    top:-1rem;
+    z-index: -1;
+    
+    padding: 2rem .875rem .25rem;
+    border-end-end-radius: 1rem;
+    border-end-start-radius: 1rem;
+
+    background-color: #E2F5D4;
+}
+
+.active {
+    background-color: #E3D5FF;
+}
+
+.node__button:not(.active) {
+    background-color: #ddd;
+}
+
+.depth-2 .node__button:not(.active) {
+    background-color: #E3D5FF;
+}

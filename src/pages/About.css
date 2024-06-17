@@ -1,0 +1,91 @@
+.about {
+    
+}
+
+.about__body {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.about__focus .article__text:nth-of-type(2){
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.about__beliefs {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: -2rem;
+    margin-left: -2rem;
+
+    overflow-x: scroll;
+}
+
+.beliefs__list__wrapper {
+    display: flex;
+}
+
+.beliefs__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 1.5rem;
+    padding-right: 2rem;
+}
+
+.beliefs__list .card {
+    align-self: stretch;
+    margin-bottom: 2rem;
+    background-color: #F5F5F5;
+    box-shadow: 0px 3px 5px 3px #0000001a;
+    
+    background-image: url('../assets/images/for_you/beliefs/ForYou_Fondo.png');
+    background-position: top top;
+    background-size: 150%;
+}
+
+.beliefs__list .card__body{
+    text-align: center;
+}
+
+.beliefs__list .card__image,
+.about__vision .card__image{
+    position:relative;
+    
+    width:100%;
+    max-width: unset;
+    
+    margin-bottom: 1rem;
+}
+
+.beliefs__list .card__image {
+    height:150px;
+}
+
+.about__vision .card__image{
+    height:250px;
+}
+
+.beliefs__list .card__image img,
+.about__vision .card__image img{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%) scale(110%);
+}
+
+.beliefs__list .article__title{
+    font-size: 1.375rem;
+    line-height: 1.56rem;
+
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.beliefs__list .article__text {
+    margin-bottom: 0rem;
+}
+

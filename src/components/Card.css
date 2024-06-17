@@ -1,0 +1,23 @@
+.card {
+    padding: 2rem;
+    border-radius: 2rem;
+    
+    background-image: url('../assets/images/products/05.Fees/lightCard.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    min-width: 25ch;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.card__image {
+    margin: 0 auto;
+    max-width: 12ch;
+}

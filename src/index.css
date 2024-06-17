@@ -1,0 +1,91 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 1rem;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color: #213547;
+  background-color: #ffffff;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  width:100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  font-size: unset;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+}
+
+ul {
+  list-style-type: none;
+  margin-inline-start:unset;
+  margin-inline-end:unset;
+  margin-block-start:unset;
+  margin-block-end:unset;
+  padding-inline-start:unset;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input {
+  display: block;
+}
+
+.hidden {
+  display:none;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}

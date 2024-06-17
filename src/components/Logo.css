@@ -1,0 +1,8 @@
+header .logo_giveandget {
+    min-width: 10rem;
+    width:10rem;
+}
+
+.burger__dropdown .logo_giveandget {
+    margin-bottom: 1rem;
+}

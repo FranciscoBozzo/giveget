@@ -1,0 +1,70 @@
+.products__body {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.products>*{
+    margin-bottom: 1.5rem;
+}
+
+.products__hero{
+}
+
+.products__hero .banner{
+    position:relative;
+    left:-15%;
+    
+    width: 100vw;
+}
+
+.products__list {
+    position:relative;
+    width:100%;
+
+    margin-bottom:90px;
+
+    line-height: 25px;
+}
+
+.products__list .icon-item {
+    margin-bottom: 2rem;
+}
+
+.products__list__background {
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:100vw;
+    height: 100vh;
+    
+    transform: translate(-50%, 65%);
+    z-index: -1;
+
+    background-image: url('/src/assets/images/products/Fondo.png');
+    background-origin: border-box;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.products__business .icon-item {
+    display: block;
+}
+
+.products__debit-card {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.products__fees {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.products__fees__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    
+    margin-bottom:2rem;
+}

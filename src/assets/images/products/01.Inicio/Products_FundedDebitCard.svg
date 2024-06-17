@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65.599" height="47.056" viewBox="0 0 65.599 47.056">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_2387" data-name="Rectángulo 2387" width="65.599" height="47.056" transform="translate(0 0)" fill="none" stroke="#5a04d8" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_2191" data-name="Grupo 2191" transform="translate(0 0)" clip-path="url(#clip-path)">
+    <path id="Rectángulo_2386" data-name="Rectángulo 2386" d="M9.794,0H50.8a9.8,9.8,0,0,1,9.8,9.8V32.261A9.795,9.795,0,0,1,50.8,42.056H9.794A9.794,9.794,0,0,1,0,32.262V9.794A9.794,9.794,0,0,1,9.794,0Z" transform="translate(2.5 2.5)" fill="none" stroke="#5a04d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <line id="Línea_216" data-name="Línea 216" x2="11.652" transform="translate(13.556 15.475)" fill="none" stroke="#5a04d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <line id="Línea_217" data-name="Línea 217" x2="38.487" transform="translate(13.556 23.528)" fill="none" stroke="#5a04d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+    <line id="Línea_218" data-name="Línea 218" x2="38.487" transform="translate(13.556 31.581)" fill="none" stroke="#5a04d8" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+  </g>
+</svg>

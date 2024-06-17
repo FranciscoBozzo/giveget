@@ -1,0 +1,20 @@
+.downloads__body{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+
+
+}
+
+.downloads__buttons{
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: stretch;
+}
+
+.downloads__buttons a {
+    margin-bottom: 1rem;
+}

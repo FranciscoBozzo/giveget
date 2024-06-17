@@ -1,0 +1,61 @@
+header {
+    display: flex;
+    gap: 1rem;
+}
+
+header .burger__button {
+    display: none;
+}
+
+header .dropdown__list {
+    width:100%;
+    left: 0px;
+}
+
+header .dropdown__list ul {
+    margin-top: 2rem;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+
+    padding-inline-start: 0;
+
+    justify-content:space-evenly;
+}
+
+header ul a {
+    font-weight: 600;
+    color: black;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+/*
+    xs < 576
+    sm > 576
+    s > 768
+    lg > 992
+    xl > 1200
+    xxl > 1400
+*/
+@media screen and (max-width: 768px) {
+    header nav{
+        display : none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header .burger__button {
+        display: block;
+    }
+}
+  

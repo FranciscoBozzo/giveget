@@ -1,0 +1,18 @@
+.contact__body {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.contact__contact {
+    
+}
+
+.contact__background {
+    z-index: -1;
+
+    position:absolute;
+    left:0px;
+    top:0px;
+
+    width:100%;
+}

@@ -1,0 +1,32 @@
+.close__button{
+    position: relative;
+    height:1.375rem;
+    width: 2rem;
+}
+.close__button.color span {
+    background-color: black;
+}
+
+.close__button.light span {
+    background-color: white;
+}
+
+.close__button span {
+    position: absolute;
+    top:50%;
+    left:50%;
+    
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    background-color: #000;
+}
+
+.close__button span:nth-child(1){
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+.close__button span:nth-child(2){
+    transform: translate(-50%, -50%) rotate(-30deg);
+}

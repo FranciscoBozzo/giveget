@@ -1,0 +1,38 @@
+
+.burger__button {
+    background-color: transparent;
+    position: relative;
+    padding: 2px;
+    width: 2rem;
+    height: 1.375rem;
+}
+
+.burger__button.color span {
+    background-color: black;
+}
+
+.burger__button.light span {
+    background-color: white;
+}
+
+.burger__button span {
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+    top:0;
+    left:0;
+    position: absolute;
+    background-color: #000;
+}
+
+.burger__button span:nth-child(1){
+    transform: translateY(0px);
+}
+.burger__button span:nth-child(2){
+    transform: translateY( calc( calc(1.375rem/2) - 2px) );
+}
+.burger__button span:nth-child(3){
+    transform: translateY(calc(1.375rem - 4px));
+}

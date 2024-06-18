@@ -41,7 +41,7 @@ section {
     --width : 900px;
     --padding: 1rem;
 
-    width: min(var(--width), 80% - (var(--padding) * 2));
+    width: min(var(--width), 100% - (var(--padding) * 2));
     margin: 0 auto;
 }
 

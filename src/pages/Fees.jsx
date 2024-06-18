@@ -283,9 +283,13 @@ export default function Fees ({header, footer}) {
                 {header}
             </div>
 
-            <div className="fees__body">
+            <section className="fees__hero">
+                Fees
+            </section>
+
+            <section className="fees__body container">
                <Tree first={true} selected={products}></Tree>
-            </div>
+            </section>
 
             <div className='fees_footer'>
                 {footer}

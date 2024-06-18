@@ -1,10 +1,23 @@
-.fee__category {
-    margin-top: 1rem;
+.fees__body {
+    min-height: 50vh;
 }
 
-.fees__body{
-    margin-left:2.5rem;
-    margin-right:2.5rem;
+.fees__hero{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    
+    padding: 1.5rem 5rem .75rem;
+
+    color:white;
+    background-color: #4E02DD;
+
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+
+.fee__category {
+    margin-top: 1rem;
 }
 
 .products_product>.node__list .node__button {

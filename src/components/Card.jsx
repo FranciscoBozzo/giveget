@@ -3,6 +3,11 @@ import './Card.css';
 
 export default function Card({ image, ...articleProps }){
 
+    const renderHeader = () => {
+        if(articleProps.header)
+            return (<div className="card__header"></div>);
+    }
+
     const renderImage = () => {
         if (image) {
             return (
@@ -14,8 +19,7 @@ export default function Card({ image, ...articleProps }){
 
     return (
         <div className="card">
-            <div className="card__header"></div>
-
+            {renderHeader()}
             { renderImage() }
 
             <div className="card__body">

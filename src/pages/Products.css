@@ -49,7 +49,7 @@
     display: block;
 }
 
-.products__debit-card {
+.products .debit-card__image {
     margin-left: -1rem;
     margin-right: -1rem;
 }

@@ -1,12 +1,8 @@
 
 import Card from "../components/Card"
 import Article from '../components/Article'
-import GradientButton from '../components/GradientButton'
 
 import './About.css';
-
-//BANNER
-import Banner from '../assets/images/about_us/AboutUs_Banner.png'
 
 //INICIO
 import TextoInicio from '../assets/images/about_us/AboutUs_TextoInicio.png'
@@ -15,7 +11,7 @@ import TextoInicio from '../assets/images/about_us/AboutUs_TextoInicio.png'
 import OurServices from '../assets/images/about_us/AboutUs_OurServices.png'
 
 //MISSION
-import Mission from '../assets/images/about_us/AboutUs_Mission.png'
+import Mission from '../assets/images/about_us/AboutUs_Mission.jpg'
 
 //VISION
 import Vision from '../assets/images/about_us/AboutUs_Vision.png'
@@ -84,48 +80,48 @@ export default function About({header, footer}){
     const copy = getTexts(lang);
 
     const focus = {
-        image : { src: TextoInicio },
+        image : { source: TextoInicio },
         title: copy.focus_1_1,
         text: [copy.focus_1_2, copy.focus_1_3]
     }
     const ourServices = {
-        image : { src: OurServices },
+        image : { source: OurServices },
         subtitle: copy.services_1_1,
         title: copy.services_1_2,
         text: [copy.services_1_3, copy.services_1_4]
     }
     const mission = {
-        image : { src: Mission },
+        image : { source: Mission },
         subtitle: copy.mission_1_1,
         title: copy.mission_1_2,
         text: [copy.mission_1_3, copy.mission_1_4]
     }
     const vision = {
-        image : { src: Vision },
+        image : { source: Vision },
         subtitle: copy.vision_1_1,
         text: copy.vision_1_2
     }
     const about_us = {
-        image : { src: AboutUs },
+        image : { source: AboutUs },
         subtitle: copy.about_1_1,
         title: copy.about_1_2,
         text: copy.about_1_3
     }
     const beliefs = [
         {
-            image : { src: FinancialInclusion },
+            image : { source: FinancialInclusion },
             title: copy.beliefs_1_1,
             text: copy.beliefs_1_2
         },{
-            image : { src: BusinessAwareness },
+            image : { source: BusinessAwareness },
             title: copy.beliefs_1_3,
             text: copy.beliefs_1_4
         },{
-            image : { src: Dreams },
+            image : { source: Dreams },
             title: copy.beliefs_1_5,
             text: copy.beliefs_1_6
         },{
-            image : { src: Rewards },
+            image : { source: Rewards },
             title: copy.beliefs_1_7,
             text: copy.beliefs_1_8
         }
@@ -137,11 +133,17 @@ export default function About({header, footer}){
                 {header}
             </div>
 
-            <div className="about__body">
+            <section className="about__hero">
+                <div className="title">
+                    <p>{focus.title}</p>
+                </div>
+            </section>
+            
+            <div className="about__body container">
 
                 <section className="about__focus">
-                    <img src={focus.image.src} alt="" />
                     <Article
+                        image={focus.image}
                         subtitle={focus.subtitle}
                         title={focus.title}
                         text={focus.text}
@@ -150,8 +152,8 @@ export default function About({header, footer}){
                 </section>
 
                 <section className="about__services">
-                    <img src={ourServices.image.src} alt="" />
                     <Article
+                        image={ourServices.image}
                         subtitle={ourServices.subtitle}
                         title={ourServices.title}
                         text={ourServices.text}
@@ -166,18 +168,18 @@ export default function About({header, footer}){
                                 beliefs.map((card, key) => 
                                     <Card
                                         key={key}
-                                        image={card.image.src}
+                                        image={card.image.source}
                                         title={card.title}
                                         text={card.text}
                                     />)
                             }
-                            </ul>
+                        </ul>
                     </div>
                 </section>
 
                 <section className="about__mission">
-                    <img src={mission.image.src} alt="" />
                     <Article
+                        image={mission.image}
                         subtitle={mission.subtitle}
                         title={mission.title}
                         text={mission.text}
@@ -187,7 +189,7 @@ export default function About({header, footer}){
 
                 <section className="about__vision">
                     <Card
-                        image={vision.image.src}
+                        image={vision.image.source}
                         subtitle={vision.subtitle}
                         title={vision.title}
                         text={vision.text}
@@ -195,8 +197,8 @@ export default function About({header, footer}){
                 </section>
 
                 <section className="about__about-us">
-                    <img src={about_us.image.src} alt="" />
                     <Article
+                        image={about_us.image}
                         subtitle={about_us.subtitle}
                         title={about_us.title}
                         text={about_us.text}

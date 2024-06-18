@@ -1,8 +1,8 @@
 .icon-item {
     display: flex;
     align-items: flex-start;
-    gap: 1.875rem;
     
+    gap: 1.875rem;
     margin: 1rem 0;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .icon-item__description {
-    font-size: 1.25;
+    font-size: 1.25rem;
 }
 
 .icon-item__icon {

@@ -1,8 +1,8 @@
 import './DebitCard.css'
 
-export default function DebitCard({image, content}){
+export default function DebitCard({content, theme}){
     return (
-        <div className="debit-card">
+        <div className={"debit-card debit-card--" + (theme ? theme : '')}>
             <div className='debit-card__content'>
                 <p className="debit-card__title">{content.title}</p>
                 <div className="debit-card__list">
@@ -11,7 +11,6 @@ export default function DebitCard({image, content}){
                 }
                 </div>
             </div>
-            <img className="debit-card__image" src={image} alt="" />
         </div>
     )
 }

@@ -1,28 +1,42 @@
-.products__body {
-    margin-left: 2rem;
-    margin-right: 2rem;
-}
-
 .products>*{
     margin-bottom: 1.5rem;
 }
 
 .products__hero{
+    position: relative;
+    padding-bottom: 150px;
+
+    width: 80%;
+    margin: 0 auto;
+}
+
+.products__hero::before {
+    content: '';
+    position:absolute;
+    left:50%;
+    bottom:0;
+    width:200%;
+    height: 200%;
+
+    transform: translateX(-50%);
+    z-index: -1;
+
+    background-image: url('/src/assets/images/products/Fondo.jpg');
+    background-origin: border-box;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .products__hero .banner{
-    position:relative;
-    left:-15%;
-    
-    width: 100vw;
+    width: 100%;
+    transform: scale(120%);
+
+    padding:3rem 0rem;
 }
 
 .products__list {
     position:relative;
-    width:100%;
-
-    margin-bottom:90px;
-
     line-height: 25px;
 }
 
@@ -30,22 +44,6 @@
     margin-bottom: 2rem;
 }
 
-.products__list__background {
-    position:absolute;
-    left:50%;
-    bottom:0;
-    width:100vw;
-    height: 100vh;
-    
-    transform: translate(-50%, 65%);
-    z-index: -1;
-
-    background-image: url('/src/assets/images/products/Fondo.png');
-    background-origin: border-box;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .products__business .icon-item {
     display: block;
@@ -63,8 +61,117 @@
 
 .products__fees__cards {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap:1rem;
     
     margin-bottom:2rem;
+}
+
+@media (min-width: 900px){
+
+    .products__hero::before {
+        content: '';
+        position:absolute;
+        left:50%;
+        bottom:0;
+        width:100vw;
+        height: 100%;
+
+        transform: translateX(-50%);
+        z-index: -1;
+
+        background-image: url('/src/assets/images/products/Fondo.jpg');
+        background-origin: border-box;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .products__hero {
+        display:flex;
+        gap: 1rem;
+    }
+
+    .products__hero>*{
+        flex: 1 1 100%;
+    }
+
+    .products__hero .banner {
+        order: 2;
+        flex: 1 1 150%;
+    }
+
+    .products__list {
+        margin-top: 5rem;
+    }
+
+    .products__list:nth-child(2) {
+        order: 1;
+        text-align: right;
+    }
+    .products__list:nth-child(2) .icon-item {
+        flex-direction: row-reverse;
+    }
+
+    .products__list:nth-child(3) {
+        order: 3;
+    }
+
+    /* ARTICLE PERSONAL */
+    .personal__article {
+        display: flex;
+    }
+
+    .products__personal .article__image img {
+        position: absolute;
+        left:0;
+        top:0;
+        transform: translate(0rem, -4rem);
+    }
+    
+    /* ARTICLE BUSINESS */
+    .products__business .article__items {
+        display: flex;
+        gap:3rem;
+    }
+
+    /* DEBIT CARD */
+    .products__debit-card {
+        margin-inline: -5rem;
+    }
+    
+    .products__debit-card .title {
+        text-align: center;
+    }
+
+    .debit-card__wrapper {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .debit-card__wrapper>*{
+        flex: 1 1 100%;
+    }
+
+    .debit-card__wrapper .debit-card__image {
+        order: 2;
+        flex: 1 1 150%;
+    }
+
+    .debit-card__wrapper .list_items:nth-child(2) {
+        order: 1;
+        text-align: right;
+    }
+    .debit-card__wrapper .list_items:nth-child(2) .icon-item{
+        flex-direction: row-reverse;
+    }
+
+    .debit-card__wrapper .list_items:nth-child(3) {
+        order: 3;
+    }
+
+    /* FEES */
+    .products__fees__cards {
+
+    }
 }

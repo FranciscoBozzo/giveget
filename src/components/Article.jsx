@@ -1,6 +1,6 @@
 import './Article.css';
 
-export default function Article({subtitle, title, text, footer, children}){
+export default function Article({image, subtitle, title, text, footer, children}){
 
     const renderText = () => {
         const arrText = Array.isArray(text) ? text : [text];
@@ -27,15 +27,31 @@ export default function Article({subtitle, title, text, footer, children}){
         }
     }
 
+    const renderImage = () => {
+        if (image){
+            return (
+                <div className='article__image'>
+                    <img src={image.source} alt={image.description} />
+                </div>
+            )
+        }
+    }
+
     return (
         <div className="article">
-            {renderSubtitle()}
-            {renderTitle()}
-            <>
+            {renderImage()}
+            
+            <div className="article__content">
+                {renderSubtitle()}
+                {renderTitle()}
                 {renderText()}
-            </>
-            { renderFooter() }
-            { children }
+                { renderFooter() }
+
+                <div className='article__items'>
+                    { children }
+                </div>
+
+            </div>
         </div>
     )
 }

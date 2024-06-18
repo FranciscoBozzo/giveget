@@ -1,20 +1,20 @@
 .debit-card {
     position: relative;
-}
 
-.debit-card__image {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
+    padding: 1.5rem;
+
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    width: 380px;
+    height: 220px;
 }
 
 .debit-card__content {
-    position:absolute;
-    left:2rem;
-    top:1rem;
-
     max-width: 20ch;
-    
-    font-size: 1.125rem;
-    font-weight: 500;
 }
 
 .debit-card__title {
@@ -24,11 +24,12 @@
     font-weight: 600;
 }
 
-
-.card--light {
+.debit-card--light {
+    background-image: url('../assets/images/products/05.Fees/lightCard.png');
     color: black;
 }
 
-.card--color {
+.debit-card--color {
+    background-image: url('../assets/images/products/05.Fees/colorCard.png');
     color: white;
 }

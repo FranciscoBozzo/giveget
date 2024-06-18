@@ -14,7 +14,7 @@
     margin-top: 1.5rem;
     margin-left: -1.5rem;
     margin-right: -1.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 100px;
 }
 
 /* BANNER DEFAULTS */
@@ -61,4 +61,27 @@
 .banner3 .banner__item img {
     max-width:70%;
     margin-bottom: 1rem;;
+}
+
+@media (min-width:900px){
+    .home{
+        background-size: 75%;
+        background-position: right top;
+    }
+    .banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .banner__content{
+        padding: 0;
+        max-width: 15ch;
+    }
+    .banner{
+        overflow: visible;
+    }
+    .banner__image img{
+        max-height: 70vh;
+    }
+
 }

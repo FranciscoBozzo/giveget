@@ -31,7 +31,7 @@ const getTexts = ( lang ) =>  {
 
         },
         en : {
-            banner1_1 : 'Get an account in dollars',
+            banner1_1 : 'Get an account in dollars ',
             banner1_2 : 'in United States',
             banner1_3 : 'Online',
 
@@ -122,7 +122,7 @@ export default function Home({footer, header}){
                 {header}
             </div>
 
-            <div className="home__body">
+            <div className="home__body container">
 
                 <section className="home__hero">
                     <Fade arrows={true} autoplay={false} duration={3000} transitionDuration={200}>

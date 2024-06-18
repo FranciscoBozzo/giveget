@@ -73,6 +73,10 @@ input {
   display: block;
 }
 
+nav {
+  white-space: nowrap;
+}
+
 .hidden {
   display:none;
 }

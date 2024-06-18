@@ -1,9 +1,39 @@
 header {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+
+    gap: 3rem;
 }
 
-header .burger__button {
+.header__nav {
+    flex-grow: 1;
+}
+
+.nav__links, .actions__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1rem;
+
+    padding-inline-start: 0;
+
+    justify-content:space-evenly;
+}
+
+.nav__link {
+    white-space: nowrap;
+}
+
+.nav__link .gradient-button {
+    font-size: 1rem;
+}
+
+header ul a {
+    font-weight: 600;
+    color: black;
+}
+
+header .dropdown {
     display: none;
 }
 
@@ -14,26 +44,6 @@ header .dropdown__list {
 
 header .dropdown__list ul {
     margin-top: 2rem;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-}
-
-header nav ul {
-    display: flex;
-    flex-direction: row;
-    gap:1rem;
-
-    padding-inline-start: 0;
-
-    justify-content:space-evenly;
-}
-
-header ul a {
-    font-weight: 600;
-    color: black;
 }
 
 /* On screens that are 992px or less, set the background color to blue */
@@ -54,7 +64,7 @@ header ul a {
         justify-content: space-between;
     }
 
-    header .burger__button {
+    header .dropdown {
         display: block;
     }
 }

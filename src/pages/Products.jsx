@@ -18,7 +18,7 @@ import iconPowerOfDollar from '../assets/images/products/03.Business/icon_powerO
 import iconGoodbyeFluctuations from '../assets/images/products/03.Business/icon_goodbyeFluctuations.svg'
 import iconRegulatedExcellence from '../assets/images/products/03.Business/icon_regulatedExcellence.svg'
 
-import internationalDebitCard from '../assets/images/products/04.International_debit_card/Products_internationalDebitCard.png'
+import internationalDebitCard from '../assets/images/products/04.International_debit_card/Products_InternationalDebitCard.jpg'
 
 import iconChargeUse from '../assets/images/products/04.International_debit_card/icon_Charge_use.svg'
 import iconDebitMulticurrency from '../assets/images/products/04.International_debit_card/icon_Multi_currency.svg'
@@ -119,7 +119,11 @@ export default function Products({header, footer}){
             subtitle : copy.article_1_1,
             title : copy.article_1_2,
             text : copy.article_1_3,
-            footer : copy.article_1_4
+            footer : copy.article_1_4,
+            image : {
+                source : productsPersonal,
+                description:"enroll now"
+            },
         },
         {
             subtitle : copy.article_2_1,
@@ -127,6 +131,10 @@ export default function Products({header, footer}){
         },
         {
             title : copy.article_3_1,
+            image: {
+                source: internationalDebitCard,
+                description:"international debit card"
+            }
         },
     ]
 
@@ -169,26 +177,25 @@ export default function Products({header, footer}){
                 {header}
             </div>
 
-            <div className="products__body">
-                <section className="products__hero">
-                    <Banner imageSrc={productsBanner} content={ () => "" }></Banner>                
-                </section>
+            <section className="products__hero">
+                <Banner imageSrc={productsBanner} content={ () => "" }></Banner>                
+                
+                <div className="products__list">
+                    { items.filter( (_,i) => i <= 2).map((item, key) => <IconItem key={key} {...item} />)}      
+                </div>
 
-                <section className="products__list">
-                    <div className="products__list__background"></div>
-                    { items.map((item, key) => <IconItem key={key} {...item} />)}
-                </section>
-
+                <div className="products__list">
+                    { items.filter( (_,i) => i > 2).map((item, key) => <IconItem key={key} {...item} />)}
+                </div>
+            </section>
+            
+            <div className="products__body container">
                 <section className="products__personal">
-                    <div className="article">
-                        <img src={productsPersonal} alt="enroll now"></img>
-                        <Article {...articles[0]}>
-                            <div className="text-center">
-                                <GradientButton text="Enroll now"></GradientButton>
-                            </div>
-                        </Article>
-                        
-                    </div>
+                    <Article {...articles[0]}>
+                        <div className="d-flex justify-content-center">
+                            <a className="gradient-button" href="https://secure.giveandget.io/register"> Enroll Now</a>
+                        </div>
+                    </Article>
                 </section>
 
                 <section className="products__business">
@@ -203,27 +210,44 @@ export default function Products({header, footer}){
                 </section>
 
                 <section className="products__debit-card">
-                    <Article {...articles[2]}>
-                        <img src={internationalDebitCard} alt="" />
-                        {   
-                            debitCardItems.map( (item, key) => {
-                                return (<IconItem key={key} {...item}></IconItem>)
-                            })
-                        }
-                    </Article>
+                    <div className="article__title text-center">
+                        {articles[2].title}
+                    </div>
+
+                    <div className="debit-card__wrapper">
+                        <div className="debit-card__image">
+                            <img src={articles[2].image.source} alt={articles[2].image.description} />
+                        </div>
+                    
+                        <div className="list_items">
+                            {   
+                                debitCardItems.filter( (_,i) => i<2).map( (item, key) => {
+                                    return (<IconItem key={key} {...item}></IconItem>)
+                                })
+                            }
+                        </div>
+                        <div className="list_items">
+                            {   
+                                debitCardItems.filter( (_,i) => i>=2).map( (item, key) => {
+                                    return (<IconItem key={key} {...item}></IconItem>)
+                                })
+                            }
+                        </div>
+                    </div>
+
                 </section>
 
                 <section className="products__fees">
                     <div className="products__fees__cards">
-                        <div className="product__fees__card card--light">
-                            <DebitCard content={ personalCardProps } image={lightCard}></DebitCard>
+                        <div className="product__fees__card">
+                            <DebitCard content={ personalCardProps } theme="light"></DebitCard>
                         </div>
-                        <div className="product__fees__card card--color">
-                            <DebitCard content={ businessCardProps } image={colorCard}></DebitCard>
+                        <div className="product__fees__card">
+                            <DebitCard content={ businessCardProps } theme="color"></DebitCard>
                         </div>
                     </div>
-                    <div className="text-center">
-                        <GradientButton text="Fees detail"></GradientButton>
+                    <div className="d-flex justify-content-center">
+                        <a href="/fees" className="text-center gradient-button">Fees Detail</a>
                     </div>
                 </section>
             </div>

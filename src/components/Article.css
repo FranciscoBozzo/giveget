@@ -2,6 +2,10 @@
 
 }
 
+.article__image {
+    position: relative;
+}
+
 .article__subtitle {
     font-size: 1.25rem;
     line-height: 1.5rem;
@@ -38,3 +42,14 @@
     margin-bottom:1rem;
 }
 
+@media (min-width: 900px){
+    .article {
+        display: flex;
+        align-items: start;
+        gap:1rem;
+    }
+
+    .article>*{
+        flex: 1 1 100%;
+    }
+}

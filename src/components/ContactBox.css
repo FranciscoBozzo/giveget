@@ -1,17 +1,20 @@
 .contact-box__wrapper {
-    margin: 0 auto;
-    max-width:100%;
-}
-
-.contact-box {
-    text-align: center;   
-    padding: 23px;
-    margin-bottom:2rem;
+    width:100%;
+    max-width: 700px;
     
-    border-radius: 30px;
+    padding: 23px;
+    margin: 0 auto 2rem;
 
     background-image: linear-gradient(#FFFFFF, #F7F2FF);
     box-shadow: 0px 3px 5px 3px #0000001a;
+    border-radius: 30px;
+}
+
+.contact-box {
+    max-width: 80%;
+    margin: 0 auto;
+
+    text-align: center;   
 }
 
 .contact-box__header{

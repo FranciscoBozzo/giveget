@@ -15,7 +15,7 @@ const buttons = [
 export default function Downloads({header, footer}){
     return (
         <div className="downloads">
-            <div className="downloads__header header--default">
+            <div className="downloads__header padding-block-500 padding-inline-500">
                 {header}
             </div>
             
@@ -24,7 +24,7 @@ export default function Downloads({header, footer}){
                 <div className="downloads__buttons">
                     {
                         buttons.map( (button, key) => {
-                            return <a key={key} className='gradient-button' href={button.url}>{button.name}</a>
+                            return <a key={key} className='button gradient-button' href={button.url}>{button.name}</a>
                         })
                     }
                     

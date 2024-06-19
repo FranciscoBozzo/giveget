@@ -15,19 +15,20 @@ import giveLogo from '../assets/images/logos/partial_give.svg';
 import getLogo from '../assets/images/logos/partial_get.svg';
 
 import { useSearchParams } from "react-router-dom";
+import useLang from "../effects/useLang";
 
 const getTexts = ( lang ) =>  {
     const map = {
         es: {
-            banner1_1 : 'Get an account in dollars ',
-            banner1_2 : 'in United States',
-            banner1_3 : 'Online',
+            banner1_1 : 'Obtén una cuenta en dólares ',
+            banner1_2 : 'en Estados Unidos',
+            banner1_3 : '¡online!',
 
-            banner2_1 : 'Yourself a Gateway to Global Prosperity',
-            banner2_2 : 'Your International Dollar Account, Loans and debit card.',
+            banner2_1 : 'Dale una oportunidad a la Prosperidad Global',
+            banner2_2 : 'Obtén tu cuenta internacional en dólares, tarjeta de débito y préstamo.',
 
-            banner3_1 : 'Take the chance to recreate Maradona’s most legendary moments!',
-            banner3_2 : 'Junio 2024 - MIAMI'
+            banner3_1 : '¡Aprovecha para revivir los momentos más legendarios de Diego A. Maradona!',
+            banner3_2 : 'Junio 2024 - MIAMI. Compra tus boletos ahora!'
 
         },
         en : {
@@ -55,7 +56,7 @@ const renderBanners = ( copy ) => {
             <>
                 <div className="nammer_item">
                     <div className="banner__text title">
-                        { copy.banner1_1 }<strong>{copy.banner1_2}<br/>{copy.banner1_3}</strong>
+                        { copy.banner1_1 }<span className="fw-bold">{copy.banner1_2}<br/>{copy.banner1_3}</span>
                     </div>
                 </div>
             </>
@@ -69,7 +70,7 @@ const renderBanners = ( copy ) => {
                         <img src={giveLogo} alt="" />
                     </div>
                     <p className="banner__text title">
-                        <strong>{copy.banner2_1}</strong>
+                        <span className="fw-bold">{copy.banner2_1}</span>
                     </p>
                 </div>
                 <div className="banner__item">
@@ -77,7 +78,7 @@ const renderBanners = ( copy ) => {
                         <img src={getLogo} alt="" />
                     </div>
                     <p className="banner__text title">
-                        <strong>{copy.banner2_2}</strong>
+                        <span className="fw-bold">{copy.banner2_2}</span>
                     </p>
                 </div>
             </>
@@ -91,7 +92,7 @@ const renderBanners = ( copy ) => {
                         <img src={fanFestLogo} alt="" />
                     </div>
                     <div className="banner__text title">
-                        <strong>{copy.banner3_1}</strong>
+                        <span className="fw-bold">{copy.banner3_1}</span>
                     </div>
                     <div className="banner__text detail">
                         {copy.banner3_2}
@@ -103,22 +104,14 @@ const renderBanners = ( copy ) => {
 }
 
 export default function Home({footer, header}){
-    const [searchParams, setSearchParams] = useSearchParams();
-    
-    let lang = searchParams.get('lang');
-  
-    if(!lang) {
-        lang = 'en'
-        setSearchParams({ lang: 'en' });
-    }
-
+    const lang = useLang()
     const copy = getTexts(lang);
 
     const banners = renderBanners(copy)
     
     return (
         <div className="home">
-            <div className="home__header header--default">
+            <div className="home__header padding-block-500 padding-inline-500">
                 {header}
             </div>
 
@@ -131,7 +124,7 @@ export default function Home({footer, header}){
                 </section>
                 
                 <section className="home__contact">
-                    <ContactBox/>
+                    <ContactBox lang={lang}/>
                 </section>
             </div>
 

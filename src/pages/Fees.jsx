@@ -279,7 +279,7 @@ export default function Fees ({header, footer}) {
     return(
         
         <div className='fees'>
-            <div className="fees__header header--default">
+            <div className="fees__header padding-block-500 padding-inline-500">
                 {header}
             </div>
 
@@ -287,7 +287,7 @@ export default function Fees ({header, footer}) {
                 Fees
             </section>
 
-            <section className="fees__body container">
+            <section className="fees__body container | padding-block-600">
                <Tree first={true} selected={products}></Tree>
             </section>
 

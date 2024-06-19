@@ -1,18 +1,14 @@
-.contact__body {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+.contact {
+    background-image: url('../assets/images/home/home_hero_bg.png');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: top ;
 }
 
-.contact__contact {
-    
-}
+@media (min-width:900px){
+    .contact{
+        background-size: 75%;
+        background-position: right top;
+    }
 
-.contact__background {
-    z-index: -1;
-
-    position:absolute;
-    left:0px;
-    top:0px;
-
-    width:100%;
 }

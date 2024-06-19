@@ -6,6 +6,11 @@
     padding: 1.5rem;
 }
 
+.dropdown a {
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+}
+
 .dropdown__list {
     position:absolute;
     z-index: 10;

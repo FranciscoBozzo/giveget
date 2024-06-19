@@ -35,12 +35,54 @@ import ForYou_Compliance from '../assets/images/for_you/benefits/ForYou_Complian
 import ForYou_Global from '../assets/images/for_you/benefits/ForYou_Global.png'
 import ForYou_Transparency from '../assets/images/for_you/benefits/ForYou_Transparency.png'
 import ForYou_HassleFree from '../assets/images/for_you/benefits/ForYou_HassleFree.png'
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const getTexts = ( lang ) => {
     const map = {
         es: {
+            community_alt: "Comunidad de Give & Get",
 
+            char_1_1: 'Democratización Bancaria',
+            char_2_1: 'Acceso fácil a clientes internacionales',
+            char_3_1: 'Construcción de ahorros y registro crediticio',
+            char_4_1: 'Activos digitales',
+            char_5_1: 'Transferencias bancarias locales e internacionales',
+            char_6_1: 'Pasarelas de pago - tarjeta de débito',
+
+            rings_1_1: 'Un mundo mejor. Facilitamos el progreso para todos a través de la seguridad económica proporcionada por una cuenta de ahorros en dólares.',
+            rings_2_1: 'Alzarse contra la desigualdad financiera para ayudar al segmento de población olvidado en necesidad.',
+            rings_3_1: 'Ofrecer oportunidades para todos, sin importar de dónde provengan. Proteja sus ahorros y evite perder valor debido a monedas débiles.',
+
+            tango_1_1: 'RECOMPENSAS',
+            tango_1_2: "Give & Get te desafía con grandes premios para replicar los momentos más legendarios de Diego A. Maradona.",
+            tango_1_3: "Desde el \"Gol del Siglo\", la \"Mano de Dios\", hasta \"Los Palos\", puedes revivir su historia y tener la oportunidad de ganar premios en efectivo.",
+            tango_1_4: "Miami - junio de 2024",
+
+            fanfest_alt: "Maradona Fan Fest logo",
+
+            cta_1_1: 'Conocer más',
+
+            referrals_1_3: "PREMIOS",
+            referrals_1_1: "Ahorre en tarifas con nuestro programa de referencia",
+            referrals_1_2: "¡Refiera a un amigo y disfrute de bonificaciones en los costos de mantenimiento de su cuenta por cada referencia exitosa!",
+
+            benefits_1_1: 'Accesible',
+            benefits_1_2: 'Todos pueden obtener fácilmente la libertad financiera al democratizar el acceso al modelo financiero estadounidense.',
+            
+            benefits_2_1: 'Cumplimiento',
+            benefits_2_2: 'La documentación digital y la información están almacenadas en un solo lugar que se puede acceder fácilmente para una revisión rápida.',
+            
+            benefits_3_1: 'Liquidez 24/7',
+            benefits_3_2: 'Proporcionamos control sobre su liquidez ya que sus fondos se guardan en el sistema bancario de EE.UU.',
+            
+            benefits_4_1: 'Transparencia',
+            benefits_4_2: 'La plataforma tecnológica tiene una transparencia superior y no puede ser alterada.',
+            
+            benefits_5_1: 'Sin complicaciones',
+            benefits_5_2: 'Reemplaza gran parte de la burocracia en el entorno bancario tradicional eliminando obstáculos con automatización precisa que hace el proceso más rápido.',
+            
+            benefits_6_1: 'Global',
+            benefits_6_2: 'Cuentas internacionales en múltiples monedas con menos barreras y más seguridad en las transacciones.'
         },
         en: {
             community_alt: "give & get community",
@@ -65,6 +107,7 @@ const getTexts = ( lang ) => {
 
             cta_1_1: 'Learn more',
 
+            referrals_1_3: "REWARDS",
             referrals_1_1: "Save on Fees with Our Referral Program",
             referrals_1_2: "Refer a friend and enjoy bonuses on your account maintenance costs for every successful referral!",
 
@@ -127,12 +170,14 @@ export default function ForYou({header, footer}){
         }
     }
     const cta = {
-        buttonText: copy.cta_1_1
+        buttonText: copy.cta_1_1,
+        url: 'https://tangod10s.com/'
     }
     const referrals = {
         image : {
             src: ForYou_SaveOnFees
         },
+        subtitle: copy.referrals_1_3,
         title: copy.referrals_1_1,
         text: copy.referrals_1_2
     }
@@ -166,20 +211,21 @@ export default function ForYou({header, footer}){
 
     return (
         <div className="for-you">
-            <div className="for-you__header header--default">
+            <div className="for-you__header | padding-block-500 padding-inline-500">
                 {header}
             </div>
 
+            <section className="for-you__hero">
+                <img className="community__logo" src={giveAndGetCommunity.image.src} alt={giveAndGetCommunity.image.alt}/>
+            </section>
+                
             <div className="for-you__body">
                 <div className="for-you__theme--dark">
-                    <section className="for-you__hero">
-                        <img className="community__logo" src={giveAndGetCommunity.image.src} alt={giveAndGetCommunity.image.alt}/>
                     
-                    </section>
-                    <section className="for-you__characteristics">
-                        <ul className="characteristics__list">
+                    <section className="for-you__characteristics | container-flex padding-block-900 margin-block-900">
+                        <ul className="characteristics__list" role="list">
                             {
-                                characteristics.map( (item, key) => {
+                                characteristics.filter((_,idx) => idx < 3 ).map( (item, key) => {
                                     return (
                                         <li key={key} className="characteristics__item">
                                             <IconItem {...item}></IconItem>
@@ -188,12 +234,23 @@ export default function ForYou({header, footer}){
                                 })
                             }
                         </ul>
-                        <div className="characteristics__hero">
-                            <img  className="characteristics__hero__image" src={ForYou_CharacteristicsHero} alt="" />
+                        <ul className="characteristics__list" role="list">
+                            {
+                                characteristics.filter((_,idx) => idx >= 3 ).map( (item, key) => {
+                                    return (
+                                        <li key={key} className="characteristics__item">
+                                            <IconItem {...item}></IconItem>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                        <div className="characteristics__hero | margin-block-600">
+                            <img  className="characteristics__hero__image " src={ForYou_CharacteristicsHero} alt="" />
                         </div>
                     </section>
 
-                    <section className="for-you__rings">
+                    <section className="for-you__rings | container-flex padding-block-900 margin-block-600">
                         <div className="rings__list">
                         {
                             rings.map( (ring, key) => {
@@ -210,32 +267,35 @@ export default function ForYou({header, footer}){
                     </section>
                 </div>
                 
-                <div className="for-you__theme--light  rounded--top">
+                <div className="for-you__theme--light | rounded-top-800 pt-800">
                     <section className="for-you__rewards">
                         
-                        <div className="rewards__tango">
-                            <img src={ForYou_RewardsTangoDios} alt="" />
+                        <div className="rewards__tango pb-600">
 
                             <Article
+                                image={{source:ForYou_RewardsTangoDios}}
                                 subtitle={tangoChallenge.subtitle}
                                 title={tangoChallenge.title}
                                 text={tangoChallenge.text}
                                 footer={tangoChallenge.footer}
-                            />
+                            >
+                                <div className="tango__cta">
+                                    <div className="fan-fest__logo">
+                                        <img src={fanFest.image.src} alt={fanFest.alt} />
+                                    </div>
+                                    <div className="fan-fest__button">
+                                        <Link to={cta.url} className="button gradient-button">{cta.buttonText}</Link>
+                                    </div>
+                                </div>
+                            </Article>
 
-                            <div className="tango__cta">
-                                <div className="fan-fest__logo">
-                                    <img src={fanFest.image.src} alt={fanFest.alt} />
-                                </div>
-                                <div className="fan-fest__button">
-                                    <GradientButton text={cta.buttonText}/>
-                                </div>
-                            </div>
+                            
                         </div>
 
                         <div className="referrals">
                             <Card
                                 image={referrals.image.src}
+                                subtitle={referrals.subtitle}
                                 title={referrals.title}
                                 text={referrals.text}
                             />
@@ -243,7 +303,7 @@ export default function ForYou({header, footer}){
 
                     </section>
 
-                    <section className="for-you__benefits">
+                    <section className="for-you__benefits | container-flex">
                         <div className="benefits__list__wrapper">
                             <ul className="benefits__list">
                                 {

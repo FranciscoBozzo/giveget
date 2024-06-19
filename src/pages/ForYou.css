@@ -1,42 +1,60 @@
 .for-you {
-    overflow:hidden;
     position: relative;
-    background-image: url('../assets/images/for_you/inicio/ForYou_Bannerprincipal.png'), linear-gradient(#5601F1, #0E0B2D 10%);
-    background-position: 77% -2%, center top;
+}
+
+.for-you::before {
+    content:'';
+    position:absolute;
+    z-index: -1;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(#5601F1, #0E0B2D 10%);
+    background-position: center top;
     background-repeat: no-repeat;
-    background-size: 270%, 100%;
+    background-size: 100%;
+}
+
+.for-you__hero {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 3rem;
+}
+
+.for-you__hero::before{
+    content:'';
+    position:absolute;
+    z-index: -1;
+    top:-100px;
+    left:0;
+    width:100%;
+    height: 100%;
+    
+    background-image: url('../assets/images/for_you/inicio/ForYou_Bannerprincipal.png');
+    background-position: 77% top;
+    background-repeat: no-repeat;
+    background-size: 270%;
 }
 
 .for-you__theme--light {
     background-color: white;
 }
 
-.for-you__hero {
-    position: relative;
-    height: 450px;
-
-    margin-bottom: 3rem;
-}
-
 .for-you .community__logo {
     position: absolute;
     left: 50%;
-    bottom: 0;
+    top: 50%;
 
     width: 80%;
 
-    transform: translatex(-50%);
+    transform: translate(-50%, 100%);
 }
 
 .for-you__characteristics {
-    margin-bottom: 4rem;
     color: white;
 
-}
-
-.characteristics__list {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
 }
 
 .characteristics__list .icon-item {
@@ -45,19 +63,19 @@
 
 .characteristics__hero {
     position: relative;
-    height: 400px
+    height: 400px;
 }
 
 .characteristics__hero__image {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(300%);
+    transform: translate(-50%, -50%) scale(110%);
+
+    max-width:100%;
+    max-height:100%;
 }
 
-.for-you__rings {
-    margin-bottom:5rem;
-}
 
 .ring {
     color: white;
@@ -87,7 +105,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    z-index: 0;
     width: 140%;
     height: 140%;
 
@@ -107,8 +124,8 @@
 }
 
 .for-you__rewards {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    width:90%;
+    margin-inline: auto;
     margin-bottom: 2rem;
 
     border-top-left-radius: 4rem;
@@ -150,15 +167,139 @@
 .benefits__list .card {
     align-self: stretch;
     margin-bottom: 2rem;
-    background-color: #F5F5F5;
-    box-shadow: 0px 3px 5px 3px #0000001a;
+    box-shadow: 0px 2px 6px 0px #0000001a;
     
-    background-image: url('../assets/images/for_you/benefits/ForYou_Fondo.png');
-    background-position: top top;
-    background-size: 150%;
+    max-width: 18ch;
+    
 }
 
 .benefits__list .card__body{
     text-align: center;
 }
 
+.referrals .card__image img{
+    height: 300px;
+}
+
+@media (min-width:900px){
+    .for-you::before {
+        background-size: auto 100%;
+        background-position: top;
+    }
+
+    .for-you .community__logo {
+        position: absolute;
+        left: 10rem;
+        top: 50%;
+    
+        width: 380px;
+    
+        transform: translate(0,-150%);
+    }
+
+    .for-you__hero{
+        height: 100vh;
+        margin-bottom: 0px;
+    }
+
+    .for-you__hero::before{
+        top:-120px;
+        background-size: cover;
+    }
+
+    .for-you__characteristics{
+        display:flex;
+        align-items: center;
+        gap:1rem;
+    }
+
+    .characteristics__list .icon-item {
+        margin-bottom:2.5rem;
+    }
+
+    .for-you__characteristics>*:nth-child(1) .icon-item{
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+    .for-you__characteristics>*:nth-child(2) {
+        order:3
+    }
+    .for-you__characteristics>*:nth-child(3) {
+        order:2;
+        flex: 1 1 50%;
+    }
+
+    .for-you__rings{
+        padding-bottom: 200px;
+        position: relative;
+    }
+
+    .for-you__rings::after{
+        content:'';
+        position: absolute;
+        z-index: -1;
+
+        left:50%;
+        transform: translateX(-50%);
+
+        width: 100vw;
+        height: 200px;
+
+        bottom:-3rem;
+
+        background-image:linear-gradient(#00000000,  #5601F199);
+        background-position:bottom;
+        background-size: 150%;
+        background-repeat: no-repeat;
+    }
+
+    .rings__list{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .for-you__theme--light {
+
+    }
+
+    .fan-fest__logo{
+        width: 350px;
+    }
+
+    .tango__cta{
+        position:relative;
+        top: -60px;
+    }
+
+    /* REFERRAL */
+    .referrals .card {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap:2rem;
+
+        padding: 1rem 3rem;
+    }
+
+    .referrals .card__image{
+        flex: 1 1 100%;
+    }
+
+    .referrals .card__image img {
+        height: 200px;
+    }
+
+    /* BENEFITS */
+    .for-you__benefits, .benefits__list_wrapper {
+    }
+
+    .benefits__list__wrapper{
+        display:block;
+        margin-inline: auto;
+    }
+
+    .benefits__list {
+        padding: unset;
+        flex-wrap: wrap;
+    }
+    
+}

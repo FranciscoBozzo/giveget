@@ -20,6 +20,8 @@
 .node__button {
     width: 100%;
 
+    cursor: pointer;
+
     display:inline-block;
     vertical-align: middle;
     position: relative;

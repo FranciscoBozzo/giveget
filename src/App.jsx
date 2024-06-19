@@ -11,6 +11,7 @@ import ForYou from './pages/ForYou';
 import Footer from './partials/Footer';
 import Header from './partials/Header';
 import Fees from './pages/Fees';
+import useLang from './effects/useLang';
 
 const pages = [
   {

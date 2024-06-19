@@ -1,8 +1,24 @@
 header {
-    display: flex;
-    align-items: center;
 
-    gap: 3rem;
+}
+
+.header--light p,
+.header--light a {
+    color:white;
+}
+.header--light p:hover,
+.header--light a:hover {
+    color:#eeeeee;
+}
+
+.header--color p,
+.header--color a {
+    color: initial;
+}
+
+.header--color p:hover,
+.header--color a:hover {
+    color: initial;
 }
 
 .header__nav {
@@ -13,24 +29,20 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap:1rem;
+    gap:1.5rem;
 
     padding-inline-start: 0;
 
-    justify-content:space-evenly;
+    justify-content:start;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--clr-neutral-900);
 }
 
 .nav__link {
     white-space: nowrap;
-}
-
-.nav__link .gradient-button {
-    font-size: 1rem;
-}
-
-header ul a {
-    font-weight: 600;
-    color: black;
 }
 
 header .dropdown {

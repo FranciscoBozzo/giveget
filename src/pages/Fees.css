@@ -24,7 +24,7 @@
     font-weight: 600;
 }
 
-.account_service .node__list .node__button {
+.account_service .node__button, .card_service .node__button {
     padding: 0.5rem 1rem;
 
     font-size: 1.125rem;

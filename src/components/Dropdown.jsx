@@ -28,8 +28,8 @@ export default function Dropdown(props){
                 {
                     props.header ? <div className="dropdown__header"><props.header/></div> : ''
                 }
-
-                <ul>
+                
+                <ul role="list">
                 {
                     items.map((item,key)=>{
                         const itemComponent = typeof item == 'function' ? item() : item;

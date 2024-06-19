@@ -24,7 +24,7 @@ export default function Tree ({ first, selected, depth=0}) {
     return selected.categories.map( ( { title, nodes }, key ) => {
         return (
                 <div key={key} className={ (selected.title + "_" + title).toLowerCase().replace(/S/g, '-')+ ' node__category' + ' depth-' + depth }>
-                    <h2 className='category__title'>{title}</h2>
+                    <h2 className='category__title | fs-400 '>{title}</h2>
                     <div className="node__list">
                         {
                             nodes.map( (node, key) => {

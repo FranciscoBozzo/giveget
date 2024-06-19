@@ -57,7 +57,7 @@ export default function Footer(){
     return(
         <footer className="footer container">
             <div className="footer__sitemap-social">
-                <section className="sitemap">
+                <section className="sitemap | fs-300">
                     <nav>
                         <ul role="navigation">
                             <li aria-label="products">

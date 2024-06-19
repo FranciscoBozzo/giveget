@@ -72,9 +72,12 @@ export default function Footer(){
                             <li aria-label="contact us">
                                 <Link to="/contact-us">{copy.contact}</Link>
                             </li>
+                            {
+                                /*
                             <li aria-label="frequent questions">
                                 <Link to="/faqs">{copy.faqs}</Link>
-                            </li>
+                            </li>*/
+                            }
                             <li aria-label="fees">
                                 <Link to="/fees">{copy.fees}</Link>
                             </li>

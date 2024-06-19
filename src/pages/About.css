@@ -2,6 +2,10 @@
     
 }
 
+.about__hero{
+    display: none;
+}
+
 .about__focus .article__text:nth-of-type(2){
     font-size: 1.25rem;
     font-weight: 600;

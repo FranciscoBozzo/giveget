@@ -76,13 +76,13 @@ const getTexts = ( lang ) => {
             personalCard_1_2:'Tarifas de Mantenimiento',
             personalCard_1_3:'Tarifas de Tarjeta de Débito',
             personalCard_1_4:'Tarifas de Transacción',
-            personalCard_1_5:'Tarifas de Transferencia Bancaria (entrante - saliente)',
+            personalCard_1_5:'Tarifas de Transferencia Bancaria',
 
             businessCard_2_1:'Tarifas de Negocios',
             businessCard_2_2:'Tarifas de Mantenimiento',
             businessCard_2_3:'Tarifas de Tarjeta de Débito',
             businessCard_2_4:'Tarifas de Transacción',
-            businessCard_2_5:'Tarifas de Transferencia Bancaria (entrante - saliente)',
+            businessCard_2_5:'Tarifas de Transferencia Bancaria',
 
             fees_detail:'Detalle de Tarifas'
         },
@@ -133,13 +133,13 @@ const getTexts = ( lang ) => {
             personalCard_1_2:'Maintenance Fees',
             personalCard_1_3:'Debit Card Fees',
             personalCard_1_4:'Transaction Fees',
-            personalCard_1_5:'Wire transfer Fees (incoming - outgoing)',
+            personalCard_1_5:'Wire transfer Fees',
 
             businessCard_2_1:'Business Fees',
             businessCard_2_2:'Maintenance Fees',
             businessCard_2_3:'Debit Card Fees',
             businessCard_2_4:'Transaction Fees',
-            businessCard_2_5:'Wire transfer Fees (incoming - outgoing)',
+            businessCard_2_5:'Wire transfer Fees',
 
             fees_detail: 'Fees Detail'
         }

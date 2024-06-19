@@ -44,18 +44,18 @@
         content: '';
         position:absolute;
         left:50%;
-        bottom:-100px;
+        top:0;
         width:100vw;
-        height: 100%;
+        height: 100vh;
 
         transform: translateX(-50%);
         z-index: -1;
 
         background-image: url('/src/assets/images/products/Fondo.jpg');
         background-origin: border-box;
-        background-position: bottom center;
+        background-position: top;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
     }
     .products__hero {
         display:flex;
@@ -68,7 +68,7 @@
 
     .products__hero .banner {
         order: 2;
-        flex: 1 1 150%;
+        flex: 1 1 200%;
     }
 
     .products__list {
@@ -106,6 +106,7 @@
     }
 
     /* DEBIT CARD */    
+    
     .products__debit-card .title {
         text-align: center;
     }
@@ -142,7 +143,7 @@
     }
 
     /* FEES */
-    .products__fees__cards {
-
+    .products__fees__cards .debit-card {
+        flex: 1 1 0;
     }
 }

@@ -24,7 +24,7 @@ export default function Downloads({header, footer}){
                 <div className="downloads__buttons">
                     {
                         buttons.map( (button, key) => {
-                            return <a key={key} className='button gradient-button' href={button.url}>{button.name}</a>
+                            return <a key={key} className='button gradient-primary' href={button.url}>{button.name}</a>
                         })
                     }
                     

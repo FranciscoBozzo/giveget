@@ -246,7 +246,7 @@ export default function Products({header, footer}){
                 <section className="products__personal | container padding-block-800">
                     <Article {...articles[0]}>
                         <div className="d-flex justify-content-center  padding-block-500">
-                            <a className="button gradient-button" href="https://secure.giveandget.io/register"> Enroll Now</a>
+                            <a className="button gradient-primary" href="https://secure.giveandget.io/register"> Enroll Now</a>
                         </div>
                     </Article>
                 </section>
@@ -296,7 +296,7 @@ export default function Products({header, footer}){
                         <DebitCard content={ businessCardProps } theme="color"></DebitCard>
                     </div>
                     <div className="d-flex justify-content-center">
-                        <a href="/fees" className="button gradient-button">{copy.fees_detail}</a>
+                        <a href="/fees" className="button gradient-primary">{copy.fees_detail}</a>
                     </div>
                 </section>
             </div>

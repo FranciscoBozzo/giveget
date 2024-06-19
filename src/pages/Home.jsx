@@ -28,19 +28,21 @@ const getTexts = ( lang ) =>  {
             banner2_2 : 'Obtén tu cuenta internacional en dólares, tarjeta de débito y préstamo.',
 
             banner3_1 : '¡Aprovecha para revivir los momentos más legendarios de Diego A. Maradona!',
-            banner3_2 : 'Junio 2024 - MIAMI. Compra tus boletos ahora!'
+            banner3_2 : 'Junio 2024 - MIAMI.',
+            banner3_3 :  'Compra tus boletos ahora!'
 
         },
         en : {
             banner1_1 : 'Get an account in dollars ',
             banner1_2 : 'in United States',
-            banner1_3 : 'Online',
+            banner1_3 : 'Online!',
 
             banner2_1 : 'Yourself a Gateway to Global Prosperity',
             banner2_2 : 'Your International Dollar Account, Loans and debit card.',
 
             banner3_1 : 'Take the chance to recreate Maradona’s most legendary moments!',
-            banner3_2 : 'June 2024 - MIAMI'
+            banner3_2 : 'June 2024 - MIAMI',
+            banner3_3 : 'Get tickets now!'
         }
     }
     return map[lang];
@@ -97,6 +99,10 @@ const renderBanners = ( copy ) => {
                     <div className="banner__text detail">
                         {copy.banner3_2}
                     </div>
+
+                    <div className="d-flex padding-block-300">
+                        <a className="gradient-secondary button" href="https://tangod10s.com/">{copy.banner3_3}</a>
+                    </div>
                 </div>
             </>
         },
@@ -115,15 +121,15 @@ export default function Home({footer, header}){
                 {header}
             </div>
 
-            <div className="home__body container">
+            <div className="home__body">
 
-                <section className="home__hero">
-                    <Fade arrows={false} autoplay={true} duration={5000} transitionDuration={200}>
+                <section className="home__hero container-flex">
+                    <Fade arrows={true} autoplay={false} duration={5000} transitionDuration={200}>
                         { banners.map((banner, key) => <Banner className={key + 1} key={key} {...banner} />) }
                     </Fade>
                 </section>
                 
-                <section className="home__contact">
+                <section className="home__contact container">
                     <ContactBox lang={lang}/>
                 </section>
             </div>

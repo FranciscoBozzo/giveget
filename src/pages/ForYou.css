@@ -138,9 +138,6 @@
     align-items: center;
 }
 
-.for-you__rewards .fan-fest__logo {
-    margin-bottom: 1.5rem;
-}
 
 .for-you__benefits {
     padding-left: 2rem;
@@ -263,12 +260,9 @@
     }
 
     .fan-fest__logo{
-        width: 350px;
-    }
-
-    .tango__cta{
-        position:relative;
-        top: -60px;
+        width: 75%;
+        max-width: 300px;
+        margin-bottom: 1rem;
     }
 
     /* REFERRAL */

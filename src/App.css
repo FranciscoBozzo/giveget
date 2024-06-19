@@ -262,13 +262,3 @@ main {
     display:none;
 }
 
-/* button */
-.button {
-    line-height: 1;
-    font-size: var(--fs-button);
-    text-decoration: none;
-
-    font-weight: var(--fw-medium);
-    color: var(--clr-neutral-100);
-}
-

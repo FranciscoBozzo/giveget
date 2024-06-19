@@ -25,7 +25,7 @@ import ForYou_RiseAgainst from '../assets/images/for_you/rings/ForYou_RiseAgains
 
 //Rewards
 import ForYou_RewardsTangoDios from '../assets/images/for_you/rewards/ForYou_TangoDios.png'
-import ForYou_FanFest from '../assets/images/for_you/rewards/ForYou_FanFest.png'
+import ForYou_FanFest from '../assets/images/logos/ForYou_FanFest.png'
 import ForYou_SaveOnFees from '../assets/images/for_you/rewards/ForYou_Rewards.png'
 
 //Benefits
@@ -284,7 +284,7 @@ export default function ForYou({header, footer}){
                                         <img src={fanFest.image.src} alt={fanFest.alt} />
                                     </div>
                                     <div className="fan-fest__button">
-                                        <Link to={cta.url} className="button gradient-button">{cta.buttonText}</Link>
+                                        <Link to={cta.url} className="button gradient-primary">{cta.buttonText}</Link>
                                     </div>
                                 </div>
                             </Article>

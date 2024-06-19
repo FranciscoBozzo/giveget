@@ -47,7 +47,7 @@ export default function Header({theme}){
 
     const actions = [
         { url:'https://secure.giveandget.io/', name:copy.login },
-        { url:'/downloads', name:copy.download, className:'button gradient-button'},
+        { url:'/downloads', name:copy.download, className:'button gradient-primary'},
         { url: lang == 'en' ? '?lang=es' : '' , name:copy.lang }
     ]
 

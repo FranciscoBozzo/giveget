@@ -118,7 +118,7 @@ export default function Home({footer, header}){
             <div className="home__body container">
 
                 <section className="home__hero">
-                    <Fade autoplay={true} duration={3000} transitionDuration={200}>
+                    <Fade autoplay={true} duration={5000} transitionDuration={200}>
                         { banners.map((banner, key) => <Banner className={key + 1} key={key} {...banner} />) }
                     </Fade>
                 </section>

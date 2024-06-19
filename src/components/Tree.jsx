@@ -21,10 +21,10 @@ export default function Tree ({ first, selected, depth=0}) {
 
     if(!selected.categories && !first) return;
 
-    return selected.categories.map( ( { title, nodes }, key ) => {
+    return selected.categories.map( ( { title, nodes, disclaimer }, key ) => {
         return (
                 <div key={key} className={ (selected.title + "_" + title).toLowerCase().replace(/S/g, '-')+ ' node__category' + ' depth-' + depth }>
-                    <h2 className='category__title | fs-400 '>{title}</h2>
+                    <h2 className='category__title | fs-300'>{title}</h2>
                     <div className="node__list">
                         {
                             nodes.map( (node, key) => {
@@ -33,10 +33,13 @@ export default function Tree ({ first, selected, depth=0}) {
                                     <div onClick={() => setClicked(node)} className={(node ==  clicked ? 'active ' : '') + 'node__button'}>
                                         <span>{node.title}</span>
                                     </div>
-                                    { node.detail ? <div className='node__detail'><p>{node.detail}</p></div> : ''}
+                                    { node.detail ? <div className='node__detail fs-300'><p>{node.detail}</p></div> : ''}
 
                                 </div>)
                             })
+                        }
+                        {
+                            disclaimer ? <div className='mt-500 fs-200'><p>{disclaimer}</p></div> : ''
                         }
                     </div>
 

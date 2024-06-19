@@ -16,14 +16,8 @@ const products = {
                             title:'Service',
                             nodes: [
                                 {
-                                    title: 'Activation',
+                                    title: 'Opening',
                                     categories: [
-                                        {
-                                            title : 'Description',
-                                            nodes: [
-                                                { title: 'Per Bank issuer' }
-                                            ]
-                                        },
                                         {
                                             title : 'Period/Description',
                                             nodes: [
@@ -32,101 +26,36 @@ const products = {
                                         },
                                     ]
                                 }, {
-                                    title: 'Pre-Fund',
+                                    title: 'Minimum Blce',
                                     categories: [
                                         {
-                                            title : 'Description',
+                                            title : 'Client G&G',
                                             nodes: [
-                                                { title: 'Ledger' }
+                                                { title: 'No minimum'}
                                             ]
-                                        },
-                                        {
-                                            title : 'Period',
-                                            nodes: [
-                                                { title: 'Once off', detail: 'Free' }
-                                            ]
-                                        },
-                                    ]
-                                }, {
-                                    title: 'Processing',
-                                    categories: [
-                                        {
-                                            title : 'Description',
-                                            nodes: [
-                                                { title: 'Per issued card' }
-                                            ]
-                                        },
-                                        {
-                                            title : 'Period',
-                                            nodes: [
-                                                { title: 'N-A', detail: 'Free' }
-                                            ]
-                                        },
-                                    ]
-                                }, {
-                                    title: 'Solution',
-                                    categories: [
-                                        {
-                                            title : 'Description',
-                                            nodes: [
-                                                { title: 'Custom card, lisuing, processing, integration, API, Once off Card' }
-                                            ]
-                                        },
-                                        {
-                                            title : 'Period',
-                                            nodes: [
-                                                { title: 'Once off', detail: 'N/A' }
-                                            ]
-                                        },
+                                        }
                                     ]
                                 }, {
                                     title: 'Maintenance',
                                     categories: [
                                         {
-                                            title : 'Description',
+                                            title : 'Period/Description',
                                             nodes: [
-                                                { title: 'Per active card' },
-                                                { title: 'Processing, issuing, maintenance, compliance, security, connectivity, chip enablement, ledger, account management.', detail: 'N/A' }
-                                            ]
+                                                { title: 'Monthly/Annual', detail:'Free' },
+                                            ],
+                                            disclaimer: '* Discounted fee unless inactivity. No transactions within the account over a 6 months period and having less than usd200 in Balance will result in a usd5 Fee charge per month.'
                                         },
                                     ]
                                 }, {
-                                    title: 'Funding',
+                                    title: 'Wire',
                                     categories: [
                                         {
-                                            title : 'Schedule',
+                                            title : 'Schedule/Description',
                                             nodes: [
-                                                { title: 'Card Funding' }
-                                            ]
-                                        },
-                                        {
-                                            title : 'Description',
-                                            nodes: [
-                                                { title: 'USD', detail: 'No Limit' }
-                                            ]
-                                        },
-                                    ]
-                                }, {
-                                    title: 'Transaction',
-                                    categories: [
-                                        {
-                                            title : 'Description',
-                                            nodes: [
-                                                { title: 'Per Local transaction', detail: '0,50' },
-                                                { title: 'Per International transaction', detail: '1,00' },
-                                            ]
-                                        },
-                                    ]
-                                }, {
-                                    title: 'Payments support',
-                                    categories: [
-                                        {
-                                            title : 'Description',
-                                            nodes: [
-                                                { title: 'In dollars', detail: 'Free' },
-                                                { title: 'In other currencies', detail: '2%' },
-                                                { title: 'Dedicated manager', detail: '0,00' },
-                                            ]
+                                                { title: 'Sending' },
+                                                { title: 'Receiving' },
+                                            ],
+                                            disclaimer: '* This limit will be reserved by G&G and the operational service company to expand limit depending on Clients behavioral scoring.'
                                         },
                                     ]
                                 }

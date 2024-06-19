@@ -10,7 +10,7 @@
 
 .home__hero {
     margin-top: 1.5rem;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* BANNER DEFAULTS */

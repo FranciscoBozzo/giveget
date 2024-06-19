@@ -262,3 +262,19 @@ main {
     display:none;
 }
 
+.floating-button {
+    position: fixed;
+
+    bottom:3rem;
+    right:3rem;
+
+    transition: transform .2s ease-in-out;
+}
+
+.floating-button:hover {
+    transform: scale(110%);
+}
+
+.wtsp {
+    width: 4rem;
+}

@@ -10,15 +10,10 @@
 
 .home__hero {
     margin-top: 1.5rem;
-    min-height: 100vh;
+    margin-bottom: 1.5rem;
 }
 
 /* BANNER DEFAULTS */
-.banner .title {
-    font-weight: 400;
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-}
 
 .banner .detail {
     font-size: 1.375rem;
@@ -64,19 +59,28 @@
 }
 
 /* BANNER 3 */
+.banner3 .banner__text.title{
+    font-size: 2rem;
+    line-height: 1;
+}
+
 .banner3 .banner__logo {
     margin-bottom: 1rem;;
 }
 
 .banner3 .banner__logo img {
-    max-width: 50%;
+    width: 50%;
+    min-width: 250px;
 }
-
 
 @media (min-width:900px){
     .home{
         background-size: 75%;
         background-position: right top;
+    }
+    .home__hero {
+        margin-top: 1.5rem;
+        min-height: 100vh;
     }
     .banner {
         display: flex;
@@ -88,11 +92,7 @@
         padding: 0;
         max-width: 15ch;
     }
-    .banner3 .banner__content{
-        padding: 0;
-        max-width: 40%;
-    }
-    
+
     .banner__image img{
         max-height: 500px;
     }
@@ -103,6 +103,17 @@
 
     .banner2 .banner__item:nth-child(2) {
         left: 2rem;
+    }
+
+    /* BANNER 3 */
+    .banner3 .banner__text.title{
+        font-size: 2.67rem;
+        line-height: 1;
+    }
+    
+    .banner3 .banner__content{
+        padding: 0;
+        max-width: 40%;
     }
 
 }

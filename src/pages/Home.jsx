@@ -71,16 +71,16 @@ const renderBanners = ( copy ) => {
                     <div className="banner__logo">
                         <img src={giveLogo} alt="" />
                     </div>
-                    <p className="banner__text title">
-                        <span className="fw-bold">{copy.banner2_1}</span>
+                    <p className="banner__text title fw-bold">
+                       {copy.banner2_1}
                     </p>
                 </div>
                 <div className="banner__item">
                     <div className="banner__logo">
                         <img src={getLogo} alt="" />
                     </div>
-                    <p className="banner__text title">
-                        <span className="fw-bold">{copy.banner2_2}</span>
+                    <p className="banner__text title fw-bold">
+                        {copy.banner2_2}
                     </p>
                 </div>
             </>
@@ -93,8 +93,8 @@ const renderBanners = ( copy ) => {
                     <div className="banner__logo">
                         <img src={fanFestLogo} alt="" />
                     </div>
-                    <div className="banner__text title">
-                        <span className="fw-bold">{copy.banner3_1}</span>
+                    <div className="banner__text title fw-bold">
+                       {copy.banner3_1}
                     </div>
                     <div className="banner__text detail">
                         {copy.banner3_2}

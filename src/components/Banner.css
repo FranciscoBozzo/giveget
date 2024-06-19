@@ -5,7 +5,11 @@
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 
-    line-height: 3.167rem;
+    line-height: 1;
     font-weight: 400;
     font-size: 2.67rem
+}
+
+.banner__text {
+    margin-bottom: 1.5rem;
 }

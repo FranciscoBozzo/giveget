@@ -28,9 +28,11 @@ export default function Tree ({ first, selected, depth=0}) {
                     <div className="node__list">
                         {
                             nodes.map( (node, key) => {
+                                const isClickable = node.categories ? 'clickable' : ''
+
                                 return( 
                                 <div key={key} className='node__item'>
-                                    <div onClick={() => setClicked(node)} className={(node ==  clicked ? 'active ' : '') + 'node__button'}>
+                                    <div onClick={() => setClicked(node)} className={(node ==  clicked ? 'active ' : '') + 'node__button ' + isClickable}>
                                         <span>{node.title}</span>
                                     </div>
                                     { node.detail ? <div className='node__detail fs-300'><p>{node.detail}</p></div> : ''}

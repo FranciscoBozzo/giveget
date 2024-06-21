@@ -75,7 +75,7 @@
     text-align: left;
 }
 
-.depth-2 .node__button:not(.active) {
+.depth-2 .node__button:not(.active, .clickable) {
     background-color: #E3D5FF;
     color: initial;
 }

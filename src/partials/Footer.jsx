@@ -100,11 +100,12 @@ export default function Footer(){
                 </section>
             </div>
             
-
+            {/*
             <section className="disclaimer">
                 <p>{copy.disclaimer}</p>
             </section>
-
+            */}
+            
             <section className="footer__end">
                 <div className="author__cite">
                     <p className="cite">{copy.author_1_1}</p>

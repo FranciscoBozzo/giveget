@@ -53,7 +53,7 @@
 }
     
 body {
-    overflow-x: clip;
+    overflow-x: hidden;
     overflow-y: auto;
 
     font-family: var(--ff-body);

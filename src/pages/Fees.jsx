@@ -41,7 +41,7 @@ const products = {
                                         {
                                             title : 'Period/Description',
                                             nodes: [
-                                                { title: 'Monthly/Annual', detail:'Free' },
+                                                { title: 'Monthly/Annual', detail:'Free*' },
                                             ],
                                             disclaimer: '* Discounted fee unless inactivity. No transactions within the account over a 6 months period and having less than usd200 in Balance will result in a usd5 Fee charge per month.'
                                         },
@@ -52,10 +52,39 @@ const products = {
                                         {
                                             title : 'Schedule/Description',
                                             nodes: [
-                                                { title: 'Sending' },
-                                                { title: 'Receiving' },
+                                                { 
+                                                    title: 'Sending' ,
+                                                    categories : [
+                                                        {
+                                                            title: 'Period/Description',
+                                                            nodes: [
+                                                                {title: 'Regular & Same day ACH', detail: 'Free'},
+                                                                {title: 'Domestic Wires', detail: '25,00 + 0,15%'},
+                                                                {title: 'International Wires (SWIFT)', detail: '40,00 + 0,15%'},
+                                                                {title: 'Limit*', detail: 'No Limit'},
+                                                            ],
+                                                            disclaimer: '* This limit will be reserved by G&G and the operational service company to expand limit depending on Clients behavioral scoring.'
+                                                        }
+                                                    ]
+
+                                                },
+                                                {
+                                                    title: 'Receiving',
+                                                    categories : [
+                                                        {
+                                                            title: 'Period/Description',
+                                                            nodes: [
+                                                                {title: 'Regular & Same day ACH', detail: 'Free'},
+                                                                {title: 'Domestic Wires', detail: '12,50 + 0,10%'},
+                                                                {title: 'International Wires (SWIFT - BIC)', detail: '20,00 + 0,10%'},
+                                                                {title: 'Limit', detail: 'No Limit*'},
+                                                            ],
+                                                            disclaimer: '* This limit will be reserved by G&G and the operational service company to expand limit depending on Clients behavioral scoring.'
+
+                                                        }
+                                                    ]
+                                                },
                                             ],
-                                            disclaimer: '* This limit will be reserved by G&G and the operational service company to expand limit depending on Clients behavioral scoring.'
                                         },
                                     ]
                                 }

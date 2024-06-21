@@ -1,13 +1,28 @@
+
+.debit-card__wrapper {
+    flex: 1 1 0;
+}
+
+
 .debit-card {
+    justify-items: center;
     position: relative;
-
-    background-size: 100%;
+    
+    background-size: cover;
     background-repeat: no-repeat;
-
-    padding: var(--size-700);
+    background-position: bottom right;
+    
+    min-width: 300px;
+    max-width: 450px;
+    aspect-ratio: 16 / 9;
+    margin-inline: auto;
 }
 
 .debit-card__content {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+
     font-size: var(--fs-500);
     font-weight: var(--fw-normal);
 }
@@ -27,4 +42,14 @@
 .debit-card--color {
     background-image: url('../assets/images/products/05.Fees/colorCard.png');
     color: var(--clr-neutral-100);
+}
+
+@media (min-width: 900px){
+
+    .debit-card__content {
+        top: 2rem;
+        left: 2rem;
+    }
+
+
 }

@@ -143,7 +143,4 @@
     }
 
     /* FEES */
-    .products__fees__cards .debit-card {
-        flex: 1 1 0;
-    }
 }

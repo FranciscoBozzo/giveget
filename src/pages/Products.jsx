@@ -290,10 +290,14 @@ export default function Products({header, footer}){
 
                 </section>
 
-                <section className="products__fees | container-flex padding-block-800">
-                    <div className="products__fees__cards | d-flex justify-content-center align-items-center gap-300 pb-500">
-                        <DebitCard content={ personalCardProps } theme="light"></DebitCard>
-                        <DebitCard content={ businessCardProps } theme="color"></DebitCard>
+                <section className="products__fees | container padding-block-800">
+                    <div className="products__fees__cards | d-flex justify-content-center align-items-center gap-400 pb-500">
+                        <div className="debit-card__wrapper">
+                            <DebitCard content={ personalCardProps } theme="light"></DebitCard>
+                        </div>
+                        <div className="debit-card__wrapper">
+                            <DebitCard content={ businessCardProps } theme="color"></DebitCard>
+                        </div>
                     </div>
                     <div className="d-flex justify-content-center">
                         <a href="/fees" className="button gradient-primary">{copy.fees_detail}</a>
